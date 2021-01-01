@@ -1,11 +1,16 @@
 import '../App.css';
-import Header from './Header'
+import Header from '../Components/Header'
+import ElfContainer from '../Containers/ElfContainer'
+import NaughtyList from '../Containers/NaughtyList'
 
 function App() {
 
-  const elf_names = ["Jingo", "Jango", "Jumbo"]
   return (
-    <Header elves={elf_names}/>
+    <>
+    <Header />
+    <ElfContainer />
+    <NaughtyList />
+    </>
   );
 }
 

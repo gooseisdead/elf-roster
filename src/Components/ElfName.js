@@ -1,8 +1,7 @@
 import React from 'react'
 
 function ElfName(props) {
-    return <p>Hi, {props.name}.</p>
-
+    return <p>{props.elf.name}</p>
 }
 
 export default ElfName 
