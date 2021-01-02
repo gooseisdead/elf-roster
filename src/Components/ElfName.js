@@ -1,7 +1,13 @@
 import React from 'react'
 
-function ElfName(props) {
-    return <p onClick={props.appClickHandler}>{props.elf.name}</p>
+class ElfName extends React.Component {
+
+    elfClickHandler = () => {
+        this.props.appClickHandler(this.props.elf)
+    }
+    render() {
+        return <p onClick={this.elfClickHandler}>{this.props.elf.name}</p>
+    }
 }
 
-export default ElfName 
+export default ElfName  

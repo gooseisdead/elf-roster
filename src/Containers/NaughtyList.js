@@ -2,10 +2,11 @@ import React from 'react'
 import ElfName from '../Components/ElfName'
 
 function NaughtyList(props) {
-    // let elves = props.elves.map(elfObj => <ElfName elf={elfObj} /> )
+    
     return (
         <>
-        {/* {elves} */}
+        <h1>NaughtyList</h1>
+        <ElfName elf={props.elf} />
         </> 
     )
 }

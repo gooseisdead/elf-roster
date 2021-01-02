@@ -6,8 +6,10 @@ import NaughtyList from '../Containers/NaughtyList'
 
 class App extends React.Component {
 
-  appClickHandler = () => {
-    console.log("in app")
+  state = { elf: {} }
+
+  appClickHandler = (elf_obj) => {
+    this.setState( { elf: elf_obj })
   }
 
   render() {
@@ -16,7 +18,7 @@ class App extends React.Component {
       <>
         <Header />
         <ElfContainer appClickHandler={this.appClickHandler} />
-        <NaughtyList />
+        <NaughtyList elf={this.state.elf}/>
       </>
     );
   }
