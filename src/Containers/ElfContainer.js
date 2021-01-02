@@ -5,7 +5,7 @@ function ElfContainer(props) {
 
     const elf_names = [ {id: 1, name: "Jingo"}, {id: 2, name: "Jango"}, {id: 3, name: "Jumbo"} ]
 
-    let elves = elf_names.map(elfObj => <ElfName elf={elfObj} /> )
+    let elves = elf_names.map(elfObj => <ElfName key={elfObj.id} elf={elfObj} appClickHandler={props.appClickHandler}/> )
 
     return (
         <>

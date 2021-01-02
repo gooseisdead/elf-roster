@@ -1,17 +1,25 @@
 import '../App.css';
+import React from 'react'
 import Header from '../Components/Header'
 import ElfContainer from '../Containers/ElfContainer'
 import NaughtyList from '../Containers/NaughtyList'
 
-function App() {
+class App extends React.Component {
+
+  appClickHandler = () => {
+    console.log("in app")
+  }
+
+  render() {
 
   return (
-    <>
-    <Header />
-    <ElfContainer />
-    <NaughtyList />
-    </>
-  );
+      <>
+        <Header />
+        <ElfContainer appClickHandler={this.appClickHandler} />
+        <NaughtyList />
+      </>
+    );
+  }
 }
 
 export default App;
