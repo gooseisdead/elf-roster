@@ -1,17 +1,29 @@
+import { render } from '@testing-library/react'
 import React from 'react'
 import ElfName from '../Components/ElfName'
+import Form from '../Components/Form'
 
-function ElfContainer(props) {
+class ElfContainer extends React.Component {
 
-    const elf_names = [ {id: 1, name: "Jingo"}, {id: 2, name: "Jango"}, {id: 3, name: "Jumbo"} ]
+    state = {
+        elves: [ {name: "Jingo"}, {name: "Jango"}, {name: "Jumbo"} ]
+    }
 
-    let elves = elf_names.map(elfObj => <ElfName key={elfObj.id} elf={elfObj} appClickHandler={props.appClickHandler}/> )
+    submitHandler = (obj) => {
+        let newArray = [...this.state.elves, obj]
+        this.setState({ elves: newArray})
+    }
 
-    return (
-        <>
-            {elves}
-        </>
-    )
+
+    render() {
+        let elves = this.state.elves.map(elfObj => <ElfName key={elfObj.id} elf={elfObj} appClickHandler={this.props.appClickHandler}/> )
+        return (
+            <>
+                {elves}
+                <Form submitHandler={this.submitHandler}/>
+            </>
+        )   
+    }
 }
 
 export default ElfContainer
