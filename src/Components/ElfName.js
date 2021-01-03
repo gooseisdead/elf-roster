@@ -6,7 +6,13 @@ class ElfName extends React.Component {
         this.props.appClickHandler(this.props.elf)
     }
     render() {
-        return <p onClick={this.elfClickHandler}>{this.props.elf.name}</p>
+        return (
+            <>
+                <h2 onClick={this.elfClickHandler}>{this.props.elf.name} </h2>
+                <p>{this.props.elf.job}</p>
+                
+            </>
+        )
     }
 }
 
