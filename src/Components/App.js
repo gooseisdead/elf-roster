@@ -18,7 +18,7 @@ class App extends React.Component {
       <>
         <Header />
         <ElfContainer appClickHandler={this.appClickHandler} />
-        <NaughtyList elf={this.state.elf}/>
+        <NaughtyList elf={this.state.elf} /> 
       </>
     );
   }
