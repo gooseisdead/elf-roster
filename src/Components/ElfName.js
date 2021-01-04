@@ -9,8 +9,6 @@ class ElfName extends React.Component {
         return (
             <>
                 <h2 onClick={this.elfClickHandler}>{this.props.elf.name} </h2>
-                <p>{this.props.elf.job}</p>
-                
             </>
         )
     }
