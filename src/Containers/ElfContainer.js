@@ -6,6 +6,15 @@ import SearchForm from '../Components/SearchForm'
 
 class ElfContainer extends React.Component {
 
+    constructor(props) {
+        super(props)
+        console.log("container const")
+    }
+
+    componentDidMount() {
+        console.log("cdm cont")
+    }
+
     state = {
         elves: [ {id: 1, name: "Jingo", job: "stockings"}, {id: 2, name: "Jango", job: "wooden toys"}, {id: 3, name: "Jumbo", job: "electronics"}, {id: 4, name: "Jerry", job: "clean-up"} ],
         searchValue: ""

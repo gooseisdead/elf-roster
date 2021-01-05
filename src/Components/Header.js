@@ -15,7 +15,7 @@ class Header extends React.Component {
     render () {
         return (
             <div> 
-                <h1 onClick={this.clickHandler} style={{ "border-style": "dashed", "border-color": this.state.color }}>ELF ROSTER</h1>
+                <h1 onClick={this.clickHandler} style={{ "borderStyle": "dashed", "borderColor": this.state.color }}>ELF ROSTER</h1>
             </div>
         )
     }

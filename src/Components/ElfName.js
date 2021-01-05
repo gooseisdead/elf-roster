@@ -5,6 +5,11 @@ class ElfName extends React.Component {
     elfClickHandler = () => {
         this.props.appClickHandler(this.props.elf)
     }
+
+    componentDidMount() {
+        console.log("cdm elf")
+    }
+
     render() {
         return (
             <>
